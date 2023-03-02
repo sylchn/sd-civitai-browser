@@ -104,11 +104,11 @@ def make_new_folder(content_type, use_new_folder, model_name, lora_old):
         new_folder = "models/VAE/new"
     elif content_type == "LORA":
         if lora_old:
-            folder = "extensions/sd-webui-additional-networks/models/lora"
-            new_folder = "extensions/sd-webui-additional-networks/models/lora/new"
-        else:
             folder = "models/Lora"
             new_folder = "models/Lora/new"
+        else:
+            folder = "extensions/sd-webui-additional-networks/models/lora"
+            new_folder = "extensions/sd-webui-additional-networks/models/lora/new"
     if content_type == "TextualInversion" or content_type == "VAE" or content_type == "AestheticGradient":
         if use_new_folder:
             model_folder = new_folder
